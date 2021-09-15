@@ -12,7 +12,7 @@ export function createCube(aScene: THREE.Scene): void {
   const cube = new THREE.Mesh(geometry, material);
 
   // configurate position & rotation
-  cube.position.set(20, 5, -50);
+  cube.position.set(20, 10, -50);
   cube.rotation.y = Math.PI / 3;
 
   // configurate shadows
