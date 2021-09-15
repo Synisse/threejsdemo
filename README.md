@@ -1,1 +1,7 @@
 # threejsdemo
+
+```
+yarn 
+
+yarn dev
+```

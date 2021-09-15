@@ -19,7 +19,7 @@ scene.fog = new THREE.Fog(0xcce0ff, 300, 1500);
 scene.background = new THREE.Color(0xcce0ff);
 
 // create camera
-const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 10000);
+const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 5000);
 
 // X, Y, Z - default coordinate system is X, Y, -Z
 camera.position.set(100, 50, 150);
