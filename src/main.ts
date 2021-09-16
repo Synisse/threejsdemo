@@ -6,6 +6,8 @@ import {createCube} from './objects/cube';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import {setupPostProcessing} from './postprocessing/postprocessing';
+import {createSphere} from './objects/sphere';
+import {Vector3} from 'three';
 
 const RENDERER_WIDTH = 960;
 const RENDERER_HEIGHT = 600;
@@ -40,6 +42,10 @@ addLighting(scene);
 
 // add cube
 createCube(scene);
+
+createSphere(scene, new Vector3(10, 20, 20), new Vector3(35, 35, -67), 0xff0000);
+createSphere(scene, new Vector3(3, 20, 20), new Vector3(25, 30, -57), 0xff0000);
+createSphere(scene, new Vector3(3, 20, 20), new Vector3(45, 45, -77), 0xff0000);
 
 // add orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
