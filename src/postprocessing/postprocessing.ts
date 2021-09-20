@@ -32,7 +32,7 @@ export function setupPostProcessing(
    * Setup post processing.
    */
   function setupPostProcessing(): void {
-    // create a renderPass on the composer
+    // add a renderPass to the composer
     const renderPass = new RenderPass(aScene, aCamera);
     aComposer.addPass(renderPass);
 

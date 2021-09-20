@@ -7,8 +7,14 @@ import * as THREE from 'three';
 export function addGround(aScene: THREE.Scene): void {
   const loader = new THREE.TextureLoader();
   const groundTexture = loader.load('./textures/grass.jpg');
+
+  // horizontal wrapping
   groundTexture.wrapS = THREE.RepeatWrapping;
+
+  // vertical wrapping
   groundTexture.wrapT = THREE.RepeatWrapping;
+
+  // set format/encoding
   groundTexture.repeat.set(250, 250);
   groundTexture.anisotropy = 16;
   groundTexture.encoding = THREE.sRGBEncoding;
@@ -19,5 +25,6 @@ export function addGround(aScene: THREE.Scene): void {
   mesh.position.y = 0;
   mesh.rotation.x = -Math.PI / 2;
   mesh.receiveShadow = true;
+
   aScene.add(mesh);
 }
