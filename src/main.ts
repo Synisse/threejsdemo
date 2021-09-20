@@ -43,9 +43,10 @@ addLighting(scene);
 // add cube
 createCube(scene);
 
-createSphere(scene, new Vector3(10, 20, 20), new Vector3(35, 35, -67), 0xff0000);
-createSphere(scene, new Vector3(3, 20, 20), new Vector3(25, 30, -57), 0xff0000);
-createSphere(scene, new Vector3(3, 20, 20), new Vector3(45, 45, -77), 0xff0000);
+// add spheres
+// createSphere(scene, new Vector3(10, 20, 20), new Vector3(35, 35, -67), 0xff0000);
+// createSphere(scene, new Vector3(3, 20, 20), new Vector3(25, 30, -57), 0xff0000);
+// createSphere(scene, new Vector3(3, 20, 20), new Vector3(45, 45, -77), 0xff0000);
 
 // add orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -55,7 +56,7 @@ controls.maxDistance = 2000;
 
 const composer = new EffectComposer(renderer);
 
-setupPostProcessing(renderer, RENDERER_WIDTH, RENDERER_HEIGHT, composer, scene, camera);
+// setupPostProcessing(renderer, RENDERER_WIDTH, RENDERER_HEIGHT, composer, scene, camera);
 
 function render(): void {
   composer.render();
