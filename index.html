@@ -16,7 +16,6 @@
 				<section>
           <h3>Introduction to Git</h3>
 					<p style="margin-top: 100px">
-            <!-- <small>Stefan Krüger</small> -->
             Stefan Krüger
           </p>
 				</section>
@@ -151,64 +150,21 @@
 					</script></code></pre>
 				</section>
 				<section data-transition="fade-in">
-					<h2 data-id="code-title">Create a cube</h2>
-					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers="|2-3|6|9-10|13-14|17"><script type="text/template">
-						export function createCube(aScene: THREE.Scene): void {
-							const geometry = new THREE.BoxGeometry(20, 20, 20);
-							const material = new THREE.MeshPhongMaterial({color: 0x00ff00});
-
-							// setup cube mesh
-							const cube = new THREE.Mesh(geometry, material);
-
-							// configurate position & rotation
-							cube.position.set(20, 5, -50);
-							cube.rotation.y = Math.PI / 3;
-
-							// configurate shadows
-							cube.castShadow = true;
-							cube.receiveShadow = true;
-
-							// add cube to scene
-							aScene.add(cube);
-						}
-					</script></code></pre>
+					<h2 data-id="code-title">Git tools</h2>
+          <ul>
+            <li>Visual Studio Code (or other editors)</li>
+            <li>GitKraken</li>
+            <li>GitHub Desktop</li>
+            <li>Fork</li>
+            <li>etc.</li>
+          </ul>
 				</section>
-        <section>
-					<h2 data-id="code-title">Easy to use extensions</h2>
-					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers><script type="text/template">
-            // add orbit controls
-            const controls = new OrbitControls(camera, renderer.domElement);
-            controls.maxPolarAngle = Math.PI * 0.5;
-            controls.minDistance = 100;
-            controls.maxDistance = 2000;
-					</script></code></pre>
-				</section>
-        <section>
-          <section>
-            <h2 data-id="code-title">Demo</h2>
-            <div id="three-canvas" width="860" height="400"></div>
-          </section>
-          <section>
-            <h2>Questions?</h2>
-          </section>
-        </section>
         <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
         </section>
         <section>
-					<h2>macio projects</h2>
-					<ul>
-						<li>K&P Qanteon</li>
-						<li>KBA</li>
-						<li>Raumplanungstool</li>
-					</ul>
-				</section>
-        <section>
-					<h2>Alternatives</h2>
-					<ul>
-						<li><a href="https://www.babylonjs.com/" target="_blank">babylon.js</a></li>
-						<li><a href="https://unity.com" target="_blank">Unity</a></li>
-					</ul>
-				</section>
+            <h2 data-id="code-title">Demo</h2>
+            <div id="three-canvas" width="860" height="400"></div>
+        </section>
         <section>
 					<h2>Helpful links to get started</h2>
 					<ul>
@@ -219,9 +175,9 @@
 						<li><a href="https://github.com/Synisse/threejsdemo" target="_blank">This presentation & repository</a></li>
 					</ul>
 				</section>
-				<section>
-					<h2>Back to <a href="#/6">code</a></h2>
-				</section>
+        <section>
+          <h2>Questions?</h2>
+        </section>
 			</div>
 		</div>
 
