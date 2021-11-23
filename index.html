@@ -72,35 +72,85 @@
           <h2 data-id="code-title">Workflow</h2>
           <img src="./images/workflow7.png">
         </section>
-        <section>
-					<h2 data-id="code-title">Setup a scene</h2>
-					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers="|2-3|6-7|9|12-14|17,20|23"><script type="text/template">
-            // setup WebGLRenderer and append to dom
-            const renderer = new THREE.WebGLRenderer({antialias: false});
-            renderer.setSize(RENDERER_WIDTH, RENDERER_HEIGHT);
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git Clone</h2>
+          <ul>
+            <li>"Download" the current state of the repository</li>
+          </ul>
 
-            // setup shadow handling
-            renderer.shadowMap.enabled = true;
-            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+          <pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
 
-            document.getElementById('three-canvas')!.appendChild(renderer.domElement);
-
-            // create scene
-            const scene = new THREE.Scene();
-            scene.fog = new THREE.Fog(0xcce0ff, 300, 1500);
-            scene.background = new THREE.Color(0xcce0ff);
-
-            // create camera
-            const camera = new THREE.PerspectiveCamera(30, RENDERER_WIDTH / RENDERER_HEIGHT, 1, 5000);
-
-            // X, Y, Z - default coordinate system is X, Y, -Z
-            camera.position.set(100, 50, 150);
-
-            // add cube
-            createCube(scene);
+            git clone git@github.com:Synisse/threejsdemo.git
 					</script></code></pre>
 				</section>
-				<section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git pull</h2>
+          <ul>
+						<li>Synchronize current branch</li>
+					</ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git pull
+					</script></code></pre>
+				</section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git add</h2>
+          <ul>
+            <li>Add specified file(s) to the commit</li>
+          </ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git add
+					</script></code></pre>
+				</section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git commit</h2>
+          <ul>
+            <li>Commit <span style="color: #c52828">staged</span> changes</li>
+          </ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git commit
+					</script></code></pre>
+				</section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git push</h2>
+          <ul>
+            <li>"Upload" current commits to the git server</li>
+          </ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git push
+					</script></code></pre>
+				</section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git branch</h2>
+          <ul>
+            <li>Create a branch named "d/arnims-icons"</li>
+          </ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git branch d/arnims-icons
+					</script></code></pre>
+				</section>
+        <section data-transition="fade-in">
+					<h2 data-id="code-title">git checkout</h2>
+          <ul>
+            <li>Checkout a branch named "d/arnims-icons"</li>
+          </ul>
+					<pre data-id="code-animation"><code class="bash" data-trim><script type="text/template">
+            # Example
+
+            git checkout d/arnims-icons
+					</script></code></pre>
+				</section>
+				<section data-transition="fade-in">
 					<h2 data-id="code-title">Create a cube</h2>
 					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers="|2-3|6|9-10|13-14|17"><script type="text/template">
 						export function createCube(aScene: THREE.Scene): void {
