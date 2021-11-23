@@ -38,6 +38,8 @@ export function setupPostProcessing(
 
     // add outlinePass shader to the composer
     outlinePass = new OutlinePass(new THREE.Vector2(aWidth, aHeight), aScene, aCamera);
+    outlinePass.edgeStrength = 3;
+    outlinePass.pulsePeriod = 1;
     aComposer.addPass(outlinePass);
 
     // add fxaa shader to the composer to improve antialiasing

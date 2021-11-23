@@ -25,9 +25,9 @@ export function addLighting(aScene: THREE.Scene): void {
   light.shadow.camera.far = 500;
 
   // setup directional light helper
-  // const helper = new THREE.DirectionalLightHelper(light, 250);
+  const helper = new THREE.DirectionalLightHelper(light, 250);
   // setup shadow helper
-  // const shadowHelper = new THREE.CameraHelper(light.shadow.camera);
+  const shadowHelper = new THREE.CameraHelper(light.shadow.camera);
 
   aScene.add(light);
   // aScene.add(helper);
