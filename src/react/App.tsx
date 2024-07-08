@@ -68,10 +68,9 @@ export default function MyApp() {
       useHelper(pointLight, THREE.PointLightHelper, 50, 'red');
     }
 
-    return (
-      <pointLight ref={pointLight} castShadow position={[-10, -10, -10]} decay={0} intensity={Math.PI/8} />
-    )
+    return <pointLight ref={pointLight} castShadow position={[-10, -10, -10]} decay={0} intensity={Math.PI/8} />;
   }
+
   function SpotLight() {
     const spotLight = useRef<THREE.SpotLight>(null);
 

@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.slides {
+  width:1500px;
+}
+
 canvas {
   margin: auto;
 }
@@ -12,7 +16,16 @@ canvas {
 
 #three-canvas-new {
   height: 600px;
-  width: 900px;
+  width: 960px;
+  margin: auto;
+}
+
+.canvas-wrapper {
+  margin: auto;
+}
+
+.react-code-wrapper {
+  height: 460px;
 }
 
 .toggle-button {
