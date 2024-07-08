@@ -4,7 +4,7 @@ import { Canvas, useFrame, ThreeElements, useLoader} from '@react-three/fiber'
 import { Stats, OrbitControls, useHelper } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-export default function MyApp() {
+export default function ReactFiberContext() {
   const [showHelper, setHelper] = useState(false);
 
   function Box(props: ThreeElements['mesh']) {

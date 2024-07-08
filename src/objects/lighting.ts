@@ -5,9 +5,9 @@ import * as THREE from 'three';
  * @param aScene The given THREE.Scene object
  */
 export function addLighting(aScene: THREE.Scene): void {
-  aScene.add(new THREE.AmbientLight(0x666666));
+  aScene.add(new THREE.AmbientLight(0x666666, 4));
 
-  const light = new THREE.DirectionalLight(0xdfebff, 1);
+  const light = new THREE.DirectionalLight(0xdfebff, 2);
   light.position.set(250, 250, -250);
 
   // setup shadow props
@@ -29,7 +29,14 @@ export function addLighting(aScene: THREE.Scene): void {
   // setup shadow helper
   const shadowHelper = new THREE.CameraHelper(light.shadow.camera);
 
+  const pointLight = new THREE.PointLight(0xdfebff, 3, 150, 0);
+  pointLight.position.set(0, 50, 0);
+
+  const pointLightHelper = new THREE.PointLightHelper(pointLight, 20, 'red');
+
   aScene.add(light);
+  aScene.add(pointLight);
   aScene.add(helper);
   aScene.add(shadowHelper);
+  aScene.add(pointLightHelper);
 }
