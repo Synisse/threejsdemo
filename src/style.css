@@ -9,3 +9,8 @@ canvas {
 .reveal pre {
   font-size: 20px;
 }
+
+#three-canvas-new {
+  height: 600px;
+  width: 900px;
+}
