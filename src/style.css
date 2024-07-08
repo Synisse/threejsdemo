@@ -14,3 +14,21 @@ canvas {
   height: 600px;
   width: 900px;
 }
+
+.toggle-button {
+  background-color: #2262ec;
+  width: 400px;
+  margin:auto;
+  margin-top: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: #5083f1;
+  }
+
+  &:active {
+    background-color: #0c3ba1;
+  }
+}

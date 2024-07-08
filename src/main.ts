@@ -56,7 +56,7 @@ controls.maxDistance = 2000;
 
 const composer = new EffectComposer(renderer);
 
-setupPostProcessing(renderer, RENDERER_WIDTH, RENDERER_HEIGHT, composer, scene, camera);
+// setupPostProcessing(renderer, RENDERER_WIDTH, RENDERER_HEIGHT, composer, scene, camera);
 
 function render(): void {
   composer.render();

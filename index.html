@@ -5,8 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="/node_modules/reveal.js/dist/reset.css">
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
-    <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" id="theme">
+    <!-- <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css"> -->
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/base16/outrun-dark.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Three.js Demo</title>
   </head>
@@ -29,7 +30,7 @@
 						<li>Compatible with most 3d formats - <span style="color: #c52828">glTF</span>, FBX, Collada, OBJ, STL</li>
 					</ul>
 				</section>
-				<section data-background-iframe="https://mdn.github.io/webgl-examples/tutorial/sample5/index.html">
+				<section>
 					<h2 data-id="code-title">Instead of this</h2>
 					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers><script type="text/template">
             //
@@ -459,16 +460,6 @@
 					</script></code></pre>
 				</section>
         <section>
-					<h2 data-id="code-title">Easy to use extensions</h2>
-					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers><script type="text/template">
-            // add orbit controls
-            const controls = new OrbitControls(camera, renderer.domElement);
-            controls.maxPolarAngle = Math.PI * 0.5;
-            controls.minDistance = 100;
-            controls.maxDistance = 2000;
-					</script></code></pre>
-				</section>
-        <section>
           <section>
             <h2 data-id="code-title">Demo Old</h2>
             <div id="three-canvas" width="860" height="400"></div>
@@ -478,17 +469,38 @@
           </section>
         </section>
         <section>
+					<h2 data-id="code-title">Create a cube</h2>
+					<pre data-id="code-animation"><code class="hljs javascript language-javascript" data-trim data-line-numbers="|2-3|6|9-10|13-14|17"><script type="text/template">
+            function StandingBox(aProps: ThreeElements['mesh']) {
+              return (
+                <mesh {...aProps} receiveShadow castShadow>
+                  <boxGeometry></boxGeometry>
+                  <meshStandardMaterial color={0x00ff00}/>
+                </mesh>
+              )
+            }
+
+            return {
+              <Canvas>
+                <StandingBox position={[0, -0.5, 0]}/>
+              </Canvas>
+            }
+
+					</script></code></pre>
+				</section>
+        <section>
             <h2 data-id="code-title">Demo New</h2>
             <div id="three-canvas-new" width="860" height="400"></div>
         </section>
         <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
         </section>
         <section>
-					<h2>macio projects</h2>
+					<h2>Previous & upcoming projects</h2>
 					<ul>
 						<li>K&P Qanteon</li>
 						<li>KBA</li>
 						<li>Raumplanungstool</li>
+						<li>Bausch + Ströbel</li>
 					</ul>
 				</section>
         <section>
