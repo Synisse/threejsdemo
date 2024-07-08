@@ -16,13 +16,13 @@ export function addLighting(aScene: THREE.Scene): void {
   light.shadow.mapSize.height = 1024;
 
   // setup shadow camera
-  const frustrum = 150;
+  const frustrum = 1500;
   light.shadow.camera.left = -frustrum;
   light.shadow.camera.right = frustrum;
   light.shadow.camera.top = frustrum;
   light.shadow.camera.bottom = -frustrum;
   light.shadow.camera.near = 0.5;
-  light.shadow.camera.far = 500;
+  light.shadow.camera.far = 1000;
 
   // setup directional light helper
   const helper = new THREE.DirectionalLightHelper(light, 250);
