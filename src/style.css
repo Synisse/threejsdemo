@@ -45,3 +45,7 @@ canvas {
     background-color: #0c3ba1;
   }
 }
+
+.card-title {
+  text-transform: none !important;
+}

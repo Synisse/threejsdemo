@@ -31,7 +31,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2 data-id="code-title">Instead of this</h2>
+					<h2 data-id="code-title" class="card-title">Native WebGL</h2>
 					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers><script type="text/template">
             //
             // Start here
@@ -409,7 +409,7 @@
 					</script></code></pre>
 				</section>
         <section>
-					<h2 data-id="code-title">Setup a scene</h2>
+					<h2 data-id="code-title" class="card-title">Native Three.js</h2>
 					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers="|2-3|6-7|9|12-14|17,20|23"><script type="text/template">
             // setup WebGLRenderer and append to dom
             const renderer = new THREE.WebGLRenderer({antialias: false});
@@ -437,7 +437,7 @@
 					</script></code></pre>
 				</section>
 				<section>
-					<h2 data-id="code-title">Create a cube</h2>
+					<h2 data-id="code-title" class="card-title">Create a cube</h2>
 					<pre data-id="code-animation"><code class="language-ts" data-trim data-line-numbers="|2-3|6|9-10|13-14|17"><script type="text/template">
 						export function createCube(aScene: THREE.Scene): void {
 							const geometry = new THREE.BoxGeometry(20, 20, 20);
@@ -461,7 +461,7 @@
 				</section>
         <section>
           <section>
-            <h2 data-id="code-title">Demo Native Three</h2>
+            <h2 data-id="code-title" class="card-title">Demo - Native Three.js</h2>
 
             <div id="three-canvas" width="860" height="400"></div>
           </section>
@@ -470,12 +470,12 @@
           </section>
         </section>
         <section>
-					<h2 data-id="code-title">Create a cube</h2>
+					<h2 data-id="code-title" class="card-title">Create a cube</h2>
 					<pre data-id="code-animation"><code class="hljs javascript language-javascript" data-trim data-line-numbers="|3,6|4|5|3-6|1-8|12|1-14"><script type="text/template">
             function StandingBox(aProps: ThreeElements['mesh']) {
               return (
                 <mesh {...aProps} receiveShadow castShadow>
-                  <boxGeometry></boxGeometry>
+                  <boxGeometry />
                   <meshStandardMaterial color={0x00ff00}/>
                 </mesh>
               )
@@ -490,14 +490,14 @@
 					</script></code></pre>
 				</section>
         <section>
-            <h2 data-id="code-title">Demo React-Three-Fiber</h2>
+            <h2 data-id="code-title" class="card-title">Demo - React-Three-Fiber</h2>
             <div class="canvas-wrapper">
               <div id="three-canvas-new" width="860" height="400"></div>
             </div>
         </section>
 
         <section>
-					<h2 data-id="code-title">Easy React Integration</h2>
+					<h2 data-id="code-title" class="card-title">Easy React Integration</h2>
 					<pre data-id="code-animation"><code class="hljs javascript language-javascript" data-trim data-line-numbers="|12|1-2, 8, 16|5-13"><script type="text/template">
             // state handling
             const [showHelper, setHelper] = useState(false);
@@ -521,7 +521,17 @@
         <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
         </section>
         <section>
-					<h2>Previous & upcoming projects</h2>
+					<h2 class="card-title">Benefits of <span style="color: #c52828">React-Three-Fiber</span></h2>
+					<ul>
+						<li>Declarative</li>
+						<li>Less boilerplate code</li>
+						<li>Potential performance benefit</li>
+						<li>Easy state management integration</li>
+						<li>Reusable components</li>
+					</ul>
+				</section>
+        <section>
+					<h2 class="card-title">Previous & upcoming projects</h2>
 					<ul>
 						<li>K&P Qanteon</li>
 						<li>KBA</li>
@@ -530,14 +540,14 @@
 					</ul>
 				</section>
         <section>
-					<h2>Alternatives</h2>
+					<h2 class="card-title">Alternatives</h2>
 					<ul>
 						<li><a href="https://www.babylonjs.com/" target="_blank">babylon.js</a></li>
 						<li><a href="https://unity.com" target="_blank">Unity</a></li>
 					</ul>
 				</section>
         <section>
-					<h2>Helpful links to get started</h2>
+					<h2 class="card-title">Helpful links to get started</h2>
 					<ul>
 						<li><a href="https://threejs.org/" target="_blank">Three.js website</a></li>
 						<li><a href="https://threejs.org/examples/" target="_blank">Three.js examples</a></li>
@@ -547,7 +557,7 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Back to <a href="#/6">code</a></h2>
+					<h2 class="card-title">Back to <a href="#/6">code</a></h2>
 				</section>
 			</div>
 		</div>
