@@ -49,3 +49,53 @@ canvas {
 .card-title {
   text-transform: none !important;
 }
+
+.low-magic {
+  background: linear-gradient(90deg, rgba(57,171,240,1) 0%, rgba(57,171,255,1) 5%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%);
+  width: 1125px;
+  margin: auto;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  line-height: 40px;
+}
+
+.medium-magic {
+  background: linear-gradient(90deg, rgba(57,171,240,1) 0%, rgba(57,171,255,1) 20%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 100%);
+  width: 1125px;
+  margin: auto;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  line-height: 40px;
+}
+.high-magic {
+  background: linear-gradient(90deg, rgba(57,171,240,1) 0%, rgba(57,171,255,1) 60%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
+  width: 1125px;
+  margin: auto;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  line-height: 40px;
+}
+.max-magic {
+  background: linear-gradient(90deg, rgba(57,171,240,1) 0%, rgba(57,171,255,1) 80%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+  width: 1125px;
+  margin: auto;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  line-height: 40px;
+}

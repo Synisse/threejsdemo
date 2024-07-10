@@ -470,7 +470,7 @@
           </section>
         </section>
         <section>
-					<h2 data-id="code-title" class="card-title">Create a cube</h2>
+					<h2 data-id="code-title" class="card-title">Create a cube with <span style="color: #c52828">R3F</span></h2>
 					<pre data-id="code-animation"><code class="hljs javascript language-javascript" data-trim data-line-numbers="|3,6|4|5|3-6|1-8|12|1-14"><script type="text/template">
             function StandingBox(aProps: ThreeElements['mesh']) {
               return (
@@ -489,13 +489,6 @@
 
 					</script></code></pre>
 				</section>
-        <section>
-            <h2 data-id="code-title" class="card-title">Demo - React-Three-Fiber</h2>
-            <div class="canvas-wrapper">
-              <div id="three-canvas-new" width="860" height="400"></div>
-            </div>
-        </section>
-
         <section>
 					<h2 data-id="code-title" class="card-title">Easy React Integration</h2>
 					<pre data-id="code-animation"><code class="hljs javascript language-javascript" data-trim data-line-numbers="|12|1-2, 8, 16|5-13"><script type="text/template">
@@ -518,8 +511,6 @@
             )
 					</script></code></pre>
 				</section>
-        <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-        </section>
         <section>
 					<h2 class="card-title">Benefits of <span style="color: #c52828">React-Three-Fiber</span></h2>
 					<ul>
@@ -528,8 +519,122 @@
 						<li>Potential performance benefit</li>
 						<li>Easy state management integration</li>
 						<li>Reusable components</li>
+						<li>Better readability</li>
 					</ul>
 				</section>
+        <section>
+          <h2 data-id="code-title" class="card-title">Demo - <span style="color: #c52828">R3F</span></h2>
+          <div class="canvas-wrapper">
+            <div id="three-canvas-new" width="860" height="400"></div>
+          </div>
+      </section>
+        <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+        </section>
+        <section>
+          <h2 class="card-title">Challenges</h2>
+          <img src="https://media.makeameme.org/created/one-does-not-5abc33.jpg" alt="">
+        </section>
+        <section>
+          <section>
+            <h2 class="card-title">Abstraction - <span style="color: #c52828">WebGL</span></h2>
+            <pre data-id="code-animation"><code class="hljs javascript language-javascript"><script type="text/template">
+        const positions = [
+          // Front face
+          -1.0, -1.0,  1.0,
+          1.0, -1.0,  1.0,
+          1.0,  1.0,  1.0,
+          -1.0,  1.0,  1.0,
+
+          // Back face
+          -1.0, -1.0, -1.0,
+          -1.0,  1.0, -1.0,
+          1.0,  1.0, -1.0,
+          1.0, -1.0, -1.0,
+
+          // Top face
+          -1.0,  1.0, -1.0,
+          -1.0,  1.0,  1.0,
+          1.0,  1.0,  1.0,
+          1.0,  1.0, -1.0,
+
+          // Bottom face
+          -1.0, -1.0, -1.0,
+          1.0, -1.0, -1.0,
+          1.0, -1.0,  1.0,
+          -1.0, -1.0,  1.0,
+
+          // Right face
+          1.0, -1.0, -1.0,
+          1.0,  1.0, -1.0,
+          1.0,  1.0,  1.0,
+          1.0, -1.0,  1.0,
+
+          // Left face
+          -1.0, -1.0, -1.0,
+          -1.0, -1.0,  1.0,
+          -1.0,  1.0,  1.0,
+          -1.0,  1.0, -1.0,
+        ];
+            </script></code></pre>
+            <div class="low-magic">5% Magic</div>
+          </section>
+
+          <section>
+            <h2 class="card-title">Abstraction - <span style="color: #c52828">Three.js</span></h2>
+            <pre data-id="code-animation"><code class="hljs javascript language-javascript"><script type="text/template">
+        // Three.js
+        // -----
+        const geometry = new THREE.BoxGeometry(20, 20, 20);
+        const material = new THREE.MeshPhongMaterial({color: 0x00ff00});
+
+        // setup cube mesh
+        const cube = new THREE.Mesh(geometry, material);
+
+        // configurate position & rotation
+        cube.position.set(20, 5, -50);
+        cube.rotation.y = Math.PI / 3;
+
+        // configurate shadows
+        cube.castShadow = true;
+        cube.receiveShadow = true;
+
+        // add cube to scene
+        aScene.add(cube);
+            </script></code></pre>
+            <div class="medium-magic">20% Magic</div>
+          </section>
+          <section>
+            <h2 class="card-title">Abstraction - <span style="color: #c52828">R3F</span></h2>
+            <pre data-id="code-animation"><code class="hljs javascript language-javascript"><script type="text/template">
+      function StandingBox(aProps: ThreeElements['mesh']) {
+        return (
+          <mesh {...aProps} receiveShadow castShadow>
+            <boxGeometry />
+            <meshStandardMaterial color={0x00ff00}/>
+          </mesh>
+        )
+      }
+
+      return {
+        <Canvas>
+          <StandingBox position={[0, -0.5, 0]}/>
+        </Canvas>
+      }
+            </script></code></pre>
+            <div class="high-magic">60% Magic</div>
+          </section>
+          <section>
+            <h2 class="card-title">Abstraction - <span style="color: #c52828">R3F</span> + <span style="color: #c52828">Drei</span></h2>
+            <pre data-id="code-animation"><code class="hljs javascript language-javascript"><script type="text/template">
+      return {
+        <Canvas>
+          <Box position={[0, -0.5, 0]} material-color={0x00ff00} receiveShadow castShadow />
+        </Canvas>
+      }
+            </script></code></pre>
+            <div class="max-magic">80% Magic</div>
+          </section>
+        </section>
         <section>
 					<h2 class="card-title">Previous & upcoming projects</h2>
 					<ul>
@@ -552,12 +657,14 @@
 						<li><a href="https://threejs.org/" target="_blank">Three.js website</a></li>
 						<li><a href="https://threejs.org/examples/" target="_blank">Three.js examples</a></li>
 						<li><a href="https://threejs.org/docs/#manual/en/introduction/Useful-links" target="_blank">Three.js useful links</a></li>
+						<li><a href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" target="_blank">React Three Fiber</a></li>
+						<li><a href="https://github.com/pmndrs/drei" target="_blank">Drei</a></li>
 						<li><a href="https://youtu.be/0-k2NKzdx74?t=228" target="_blank">Kieback & Peter example</a></li>
 						<li><a href="https://github.com/Synisse/threejsdemo" target="_blank">This presentation & repository</a></li>
 					</ul>
 				</section>
 				<section>
-					<h2 class="card-title">Back to <a href="#/6">code</a></h2>
+					<h2 class="card-title">Back to <a href="#/8">code</a></h2>
 				</section>
 			</div>
 		</div>
@@ -570,15 +677,11 @@
     <script src="/node_modules/reveal.js/plugin/markdown/markdown.js"></script>
     <script src="/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
     <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
         minScale: 1,
         maxScale: 1,
         width: 1250,
-        // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
       });
     </script>
